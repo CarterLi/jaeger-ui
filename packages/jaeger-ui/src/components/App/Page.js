@@ -56,9 +56,6 @@ export class PageImpl extends React.Component<Props> {
       <div>
         <Helmet title="Jaeger UI" />
         <Layout>
-          <Header className="Page--topNav">
-            <TopNav />
-          </Header>
           <Content className="Page--content">{this.props.children}</Content>
         </Layout>
       </div>
