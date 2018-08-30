@@ -169,27 +169,6 @@ export default function TracePageHeader(props: TracePageHeaderProps) {
             {name || FALLBACK_TRACE_NAME}
           </h1>
         </a>
-        <KeyboardShortcutsHelp className="ub-mr2" />
-        <div className="ub-mr2">
-          <Input
-            name="search"
-            placeholder="Search..."
-            onChange={event => updateTextFilter(event.target.value)}
-            defaultValue={textFilter}
-            data-test={markers.IN_TRACE_SEARCH}
-          />
-        </div>
-        <Dropdown overlay={viewMenu}>
-          <Button className="ub-mr2">
-            View Options <Icon type="down" />
-          </Button>
-        </Dropdown>
-        {archiveButtonVisible && (
-          <Button className="ub-mr2 ub-flex ub-items-center" onClick={onArchiveClicked}>
-            <IoIosFilingOutline className="TracePageHeader--archiveIcon" />
-            Archive Trace
-          </Button>
-        )}
       </div>
       {!slimView && <LabeledList className="TracePageHeader--overviewItems" items={overviewItems} />}
     </header>
